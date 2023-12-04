@@ -50,7 +50,7 @@ while True:
                                                                             #'nombre[index + 2:]' sélectionne une portion de la liste nombre depuis l'élément suivant le premier nombre impliqué dans l'opération jusqu'à la fin de la liste. Ici, ça sélectionne '[4, '+', 4]'.
             historique_operations.append((operation, addition))#ici je stocke sous forme de tuple, l'operation sous forme de str et le résultat de l'addition                                                            
         resultat = nombre[0] # Ici j'assigne la première valeur de la niste 'nombre' à la variable 'resultat'
-        afficher_historique(historique_operations)   
+        afficher_historique(historique_operations) #ici j'appelle ma fontion qui me permet d'afficher l'historique après chaques opérations  
     elif '-' in nombre:
         while '-' in nombre:
             index = nombre.index('-')
