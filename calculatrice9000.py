@@ -1,9 +1,9 @@
-historique_operations = []
+historique_operations = []#ici je crée une variable 'historique_operations' qui va contenir les opérations et résultats de l'historique
 
 def afficher_historique(historique):#fonction qui affiche l'historique
     print("Historique des opérations et résultats :")
-    for operation, result in historique: #ici
-        print(f"{operation} = {result}")
+    for operation, result in historique: #ici j'utilise une boucle for pour afficher chaques opérations et résultats de l'historique
+        print(f"{operation} = {result}") #ici j'affiche chaques opérations et résultats de l'historique
 
 def effacer_historique(): #fonction qui supprime l'historique
     global historique_operations #une variable dans une fonction n'étant pas accessible en dehors de ctte foonction, ici le mot clé global permet à la variable 'historique_opérations' d'être accessible à l'extérieur de la fonction
@@ -11,7 +11,7 @@ def effacer_historique(): #fonction qui supprime l'historique
     historique_operations = [] #ici j'affiche la variable 'historique_operations' qui est vide, elle est exécutée quand la fonction 'effacer_historique()' est appelée 
     print("L'historique a été effacé.")
 
-while True:
+while True: #boucle qui va permettre de répéter le programme tant que l'utilisateur ne quitte pas le programme
     nombre = [] #variable qui va contenir mes données d'entrée sous forme de liste
 
     while True: #boucle qui va récuperer les données entré par l'utilisateur
@@ -82,9 +82,9 @@ while True:
         resultat = nombre[0]
         afficher_historique(historique_operations)
 
-    if resultat is not None:
+    if resultat is not None:#cette condition permet de verifier si la variable 'resultat' est différente de 'None'
         print(f"Résultat de l'opération:", resultat)
-    choix = input("Voulez-vous effectuer une autre opération ? (Oui/Non): ").lower()
+    choix = input("Voulez-vous effectuer une autre opération ? (Oui/Non): ").lower()#ici l'utilisateur va devoir entrer 'oui' ou 'non' pour effectuer une autre opération ou non
     if choix != 'oui':
         break
     choix = input("Voulez-vous effacer l'historique ? (Effacer/Non): ").lower()
